@@ -6,14 +6,15 @@
 body {
   background-image: url(/images/bg-pattern-top-mobile.svg),
     url(/images/bg-pattern-bottom-mobile.svg);
-  background-position: top, bottom;
+  background-position: top left, bottom right;
   background-repeat: no-repeat, no-repeat;
+  background-size: 95vw, 110vw;
   font-family: "Spartan", sans-serif;
 }
 
 .container {
-  margin: 0 calc(50% - (375px / 2));
-  width: 375px;
+  margin: 0 10vw;
+  width: 80vw;
 }
 
 h1 {
@@ -70,7 +71,7 @@ h1 {
 
 .reviwer {
   background-color: #512051;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 25px 0;
   width: 327px;
   margin-bottom: 15px;
@@ -112,29 +113,83 @@ h1 {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 600px) {
-  .body {
+@media only screen and (min-width: 1000px) {
+  body {
     background-image: url(/images/bg-pattern-top-desktop.svg),
       url(/images/bg-pattern-bottom-desktop.svg);
-    background-position: top, bottom;
     background-repeat: no-repeat;
+    background-size: 45vw, 70vw;
   }
 
   .container {
-    margin: 0 10%;
+    margin: 20vh 10%;
     max-width: 1440px;
     width: 80%;
   }
 
   h1 {
     font-size: 48px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .main-text {
+    margin: 2.5vh 0 0 0;
+    text-align: left;
+  }
+
+  .main-text > br {
+    display: none;
+  }
+
+  .marketingSection {
+    display: grid;
+    grid-template-columns: 40% 60%;
   }
 
   .rating-box {
-    width: 445px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 20px;
+    height: auto;
+    width: minmax(250px, auto);
+  }
+
+  .starTwo {
+    margin-left: 6vw;
+  }
+
+  .starThree {
+    margin-left: 12vw;
+  }
+
+  .testimonialSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
   }
 
   .reviwer {
+    height: auto;
     width: 350px;
+  }
+
+  .reviewTwo {
+    margin-top: 40px;
+  }
+
+  .reviewThree {
+    margin-top: 80px;
+  }
+
+  .reiverDetailsContainer {
+    height: 40px;
+    margin-top: 15px;
+    width: 160px;
+  }
+
+  .reviwerText {
+    line-height: 1.75;
+    margin: 25px 10% 10px 10%;
   }
 }
