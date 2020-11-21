@@ -40,20 +40,24 @@ h1 {
 }
 
 .rating-box {
+  align-items: center;
   background-color: #f7f2f7;
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 10px 0;
   text-align: center;
-
   width: 327px;
+}
+
+.rating-box > img {
+  padding: 5px;
 }
 
 .rating-box > p {
   color: #512051;
   font-size: 13px;
   font-weight: 700;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 .testimonialSection {
@@ -149,10 +153,13 @@ h1 {
 
   .rating-box {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 0 20px;
+    grid-template-columns: 10px 10px 10px 10px 10px 75%;
+    column-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
     height: auto;
-    width: minmax(250px, auto);
+    width: minmax(300px, auto);
   }
 
   .starTwo {
